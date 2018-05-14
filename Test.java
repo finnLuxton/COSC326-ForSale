@@ -51,16 +51,12 @@ public class Test {
         };
         
         List<Player> players = new ArrayList<>();
-        //for(int i = 0; i < 1; i++) {
-        //    players.add(new Player("R" + ((char) ('A' + i)), r));
-        //    players.add(new Player("N" + ((char) ('A' + i)), s));
-        //}
+        for(int i = 0; i < 2; i++) {
+            players.add(new Player("R" + ((char) ('A' + i)), r));
+            players.add(new Player("N" + ((char) ('A' + i)), s));
+        }
         players.add(new Player("TheOne", new TheOne()));
-        players.add(new Player("TheTwo", new TheTwo()));
-        players.add(new Player("TheThree", new TheThree()));
-        players.add(new Player("TheFour", new TheFour()));
-        players.add(new Player("TheFive", new TheFive()));
-        Collections.shuffle(players);
+
         GameManager g = new GameManager(players);
         g.run();
     }

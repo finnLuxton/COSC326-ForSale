@@ -1,5 +1,14 @@
 #!/usr/bin/python
 import sys
+'''
+For Sale file to check winners.txt and output the winrate for included strategies.
+winners.txt must be generated using the loop.sh script
+
+Authors - Finn Luxton
+          Nic Coles
+          Dominik Pashcke
+          Tom Kent-Peterson
+'''
 
 numPlayers = sys.argv[1]
 file = open("winners.txt", "r")

@@ -1,3 +1,9 @@
+/* COSC326 Etude 7 For Sale
+   Authors : Finn Luxton
+             Nic Coles
+             Dominik Paschke
+             Tom Kent-Peterson */
+
 package forsale;
 
 import java.util.List;
@@ -162,7 +168,7 @@ public class TheOne implements Strategy {
                 return p.getCards().get(0);
             }
             
-        }else if(range < 9){
+        }else if(range < 10){
             if(!avgStack.isEmpty()){
                 return avgStack.get(0);
             }else if(!shitStack.isEmpty()){
