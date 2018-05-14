@@ -10,8 +10,10 @@ Authors - Finn Luxton
           Tom Kent-Peterson
 '''
 
+# Takes in a command line argument for the number of players
 numPlayers = sys.argv[1]
 file = open("winners.txt", "r")
+
 count = 0
 testOneWins = 0;
 testTwoWins = 0;
@@ -21,7 +23,8 @@ testFiveWins = 0;
 testSixWins = 0;
 randomWins = 0;
 folderWins = 0;
-# have 3 counters for winner count, one for test1, test2, and random ai
+
+# Finds the winner from each game results and increments their respective winner count
 for line in file:
     if count % int(numPlayers) == 0:
         if line.split()[1] == "TheOne":
@@ -40,10 +43,10 @@ for line in file:
             randomWins += 1
         if line.split()[1] == "NA":
             folderWins += 1
-        
-        # look for text of winner. Increment winners variable if they won
     count += 1
-# print count winners
+
+    
+# Prints the percentage of all the strategies 
 if count % int(numPlayers) != 0:
     print("File contaminated, doesnt have correct number of lines")
 if testOneWins != 0:
